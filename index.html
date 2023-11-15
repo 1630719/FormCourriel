@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire commmande</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap-reboot.rtl.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap-utilities.rtl.css">
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.esm.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+
+<body>
+<div class="row ms-2">
+    <div class="col container border border-1">
+        <form action="mailto:xavierayotte@gmail.com" method="post" class="col g-3" onsubmit="event.preventDefault()">
+            <h1 class="h1 mb-4"> Formulaire de commande de la quincaillerie </h1>
+
+            <!-- Choix des outils -->
+            <div class="mb-4 col-md-6">
+                <label for="ChoixOutil" class="form-label h2"> Choisissez l'outil à commander : </label>
+                <select class="form-select col-4" name="ChoixOUtil" id="ChoixOutil" multiple aria-multiselectable="true">
+                    <option value="Marteau"> Marteau </option>
+                    <option value="Tournevis"> Tournevis </option>
+                    <option value="Pince"> Pince </option>
+                    <option value="Scie"> Scie </option>
+                    <option value="Perceuse"> Perceuse </option>
+                    <option value="RubanMesurer"> Ruban à mesurer </option>
+                </select>
+            </div>
+
+            <!-- Section adresse de facturation -->
+            <!-- Nom du client -->
+            <div class="mb-3 col-md-6">
+                <h2 class="h2 mb-3">Entrez votre adresse de facturation : </h2>
+                <label for="Nom" class="form-label"> Nom : </label>
+                <input type="text" required placeholder="Xavier" name="Nom" id="Nom" class="form-control col-md-4" pattern=""><!-- Ajouter pattern -->
+            </div>
+
+            <!-- Adresse du client -->
+            <div class="mb-3 col-md-6">
+                <label for="Adresse" class="form-label"> Adresse : </label>
+                <textarea rows="3" name="Adresse" id="Adresse" class="form-control col-md-4"></textarea>
+            </div>
+
+            <!-- Section adresse de livraison -->
+            <!-- Case pour cocher si adresse facturation = livraison -->
+            <div class="mb-3 col-md-6">
+                <h2 class="h2 mb-4"> Entrez votre adresse de livraison : </h2>
+                <label for="MemeAdresse" class="form-check-label"> Utiliser la même adresse que pour la facturation  </label>
+                <input type="checkbox" name="MemeAdresse" id="MemeAdresse" class="form-check-input ms-3">
+                <p> OU </p>
+            </div>
+
+            <!-- Nom pour livraison -->
+            <!-- Nom du client LIVRAISON -->
+            <div class="mb-3 col-md-6">
+                <h2 class="h2 mb-3">Entrez votre adresse de facturation : </h2>
+                <label for="NomLivraison" class="form-label"> Nom : </label>
+                <input type="text" required placeholder="Xavier" name="NomLivraison" id="NomLivraison" class="form-control col-md-4" pattern=""><!-- Ajouter pattern -->
+            </div>
+
+            <!-- Adresse du client -->
+            <div class="mb-3 col-md-6">
+                <label for="AdresseLivraison" class="form-label"> Adresse : </label>
+                <textarea rows="3" name="AdresseLivraison" id="AdresseLivraison" class="form-control col-md-4"></textarea>
+            </div>
+            <div>
+                <input class="btn btn-primary" type="submit" value="Envoyer" id="BoutonEnvoyer">
+            </div>
+        </form>
+    </div>
+
+
+
+</div>
+</body>
+</html>
